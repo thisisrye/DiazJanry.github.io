@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --black-bg: #222222;
+
+    --font-nunito: 'Nunito Sans', sans-serif;
+    --font-black: #424242;
+    --font-white: #d5d5d5;
+}
+
+/* HEADER */
+
+nav {
+    background-color: var(--black-bg);
+    padding: .5rem;
+    color: var(--font-white);
+    font-family: var(--font-nunito);
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
