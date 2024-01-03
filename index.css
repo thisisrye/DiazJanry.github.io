@@ -8,18 +8,47 @@
 
 :root {
     --black-bg: #222222;
-    --white-bg: #d5d5d5;
+    --white-bg: #f9f9f9;
+    --orange: #e14e1d;
+    --blue: #0277bd;
+    --yellow: #f0db4f;
 
+    --font-inter: 'Inter', sans-serif;
     --font-nunito: 'Nunito Sans', sans-serif;
     --font-black: #424242;
     --font-white: #d5d5d5;
 }
 
+/* CUSTOM FONT */
+
+@font-face {
+    font-family: 'Haoura sans regular';
+    src: url(../DiazJanry.github.io/font/Hauora-Regular.ttf);
+
+    font-family: 'Haoura sans bold';
+    src: url(../DiazJanry.github.io/font/Hauora-Bold.ttf);
+}
+
+/* MOUSE SCROLL */
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 20pc;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f9f9f9;
+  }
+ 
+  ::-webkit-scrollbar-thumb {
+    background: #222; 
+  }
+
 /* HEADER */
 
 nav {
     background-color: var(--black-bg);
-    padding: .5rem;
+    padding: 1.5rem 2.5rem;
     color: var(--font-white);
     font-family: var(--font-nunito);
     width: 100%;
@@ -51,31 +80,197 @@ a:visited {
     display: none;
 }
 
+/* HOME */
+
+#home {
+    background-color: var(--white-bg);
+    height: 100vh;
+    /* border: 2px solid red; */
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 105rem;
+    /* border: 2px solid black; */
+    padding: 2rem;
+}
+
+.content {
+    position: relative;
+    padding: 2rem;
+    /* border: 2px solid green; */
+    margin-top: 20rem;
+}
+
+/* HERO */
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-text h1 {
+    font-family: 'Haoura sans bold';
+    font-size: 4em;
+}
+
+.hero-text p {
+    font-family: var(--font-inter);
+    font-size: 18px;
+    color: var(--font-black);
+    margin-bottom: 1rem;
+}
+
+.hero-links {
+    display: flex;
+    font-size: 2rem;
+    gap: 1rem;
+}
+
+.hero-img img {
+    max-width: 20rem;
+}
+
+.tech-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 2rem;
+}
+
+.tech-text {
+    display: flex;
+    align-items: center;
+
+}
+
+.tech-text p {
+    font-family: var(--font-inter);
+    border-right: 2px solid var(--black-bg);
+    padding-right: 2rem;
+    margin-right: 3rem;
+    font-size: 20px;
+}
+
+.tech-icons {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    gap: 1.2rem;
+}
+
+#tailwind {
+    max-width: 28px;
+}
+
+
+/* ABOUT */
+
+.about-container {
+    /* border: 2px solid black; */
+    padding: 2rem;
+}
+
+.about-content {
+    padding: 2rem;
+}
+
+.about-text h1 {
+    font-family: 'Haoura sans bold';
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-text p {
+    font-family: var(--font-inter);
+    /* font-family: var(--font-nunito); */
+    font-size: 18px;
+    color: var(--font-black);
+    text-align: center;
+    line-height: 1.3em;
+}
+
+.about-text p:nth-last-child(1) {
+    margin-top: 1rem;
+}
+
+
+
+/* MEDIA QUERIES */
+
 @media only screen and (max-width: 952px) {
-    label.logo {
-        font-size: 30px;
-        padding-left: 50px;
+    #home {
+        height: 120vh;
     }
 
     nav ul li a {
         font-size: 16px;
     }
+
+    a:visited {
+        color: var(--font-black);
+    }
+    
+    .hero-content {
+        flex-direction: column-reverse;
+        height: auto;
+        align-items: center;
+        gap: 1.3rem;
+    }
+
+    .content {
+        margin-top: .5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 3em;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .hero-text p {
+        text-align: center;
+    }
+
+    .hero-links {
+        justify-content: center;
+    }
+
+    .tech-container {
+        margin-top: 5rem;
+    }
+
+    .tech-text {
+        flex-direction: column;
+        margin: 0 auto;
+    }    
+
+    .tech-text p {
+       border-right: none;
+       border-bottom: 2px solid var(--black-bg);
+       margin-bottom: 2rem;
+       padding: 0 0 1.5rem 0;
+       margin: 0 auto 2rem;
+    }
+
 }
 
 @media only screen and (max-width: 858px) {
     .checkbtn {
         display: block;
+        font-size: 20px;
     }
 
     ul {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #2c3e50;
+        background: #fff;
         top: 80px;
         right: -100%;
         text-align: center;
-        transition: all .5s
+        transition: all .5s;
     }
 
     nav ul li {
@@ -90,7 +285,7 @@ a:visited {
 
     a:hover, a.active {
         background: none;
-        color: #0082e6;
+        color: var(--font-black);
     }
 
     #check:checked ~ ul {
