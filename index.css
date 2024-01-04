@@ -359,6 +359,12 @@ a:visited {
     align-items: center;
 }
 
+.email {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+
 .phone {
     display: flex;
     align-items: center;
@@ -366,8 +372,11 @@ a:visited {
     margin: 0 4rem;
 }
 
-[left], [right] {
+[left] {
+    display: flex;
+    align-items: center;
     font-size: 30px;
+    gap: 1.3rem;
 }
 
 
@@ -376,6 +385,10 @@ a:visited {
 @media only screen and (max-width:1440px) {
     #about {
         height: 100vh;
+    }
+
+    #contact {
+        height: 35vh;
     }
 }
 
@@ -528,6 +541,16 @@ a:visited {
     .project1-caption h2 {
         margin-bottom: 2rem;
     }
+
+    .contact-content h1 {
+        text-align: center;
+    }
+
+    .phone {
+        margin: 0 3rem;
+    }
+
+
 }
 
 @media only screen and (max-width:425px) {
@@ -542,6 +565,14 @@ a:visited {
     #projects {
         height: 300vh;
     }
+
+    #contact {
+        height: 55vh;
+    }
+
+    .contact-content-info {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -551,6 +582,14 @@ a:visited {
 
     #projects {
         height: 300vh;
+    }
+
+    #contact {
+        height: 55vh;
+    }
+
+    .phone {
+        margin: 0 2rem;
     }
 }
 
