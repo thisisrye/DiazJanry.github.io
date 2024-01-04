@@ -521,7 +521,11 @@ a:visited {
     }
 
     #projects {
-        height: 370vh;
+        height: 390vh;
+    }
+
+    #contact {
+        height: 40vh;
     }
 
     .projects-content h1 {
@@ -563,11 +567,11 @@ a:visited {
     }
 
     #projects {
-        height: 300vh;
+        height: 312vh;
     }
 
     #contact {
-        height: 55vh;
+        height: 58vh;
     }
 
     .contact-content-info {
@@ -581,11 +585,11 @@ a:visited {
     }
 
     #projects {
-        height: 300vh;
+        height: 312vh;
     }
 
     #contact {
-        height: 55vh;
+        height: 58vh;
     }
 
     .phone {
