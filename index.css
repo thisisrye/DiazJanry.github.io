@@ -249,7 +249,7 @@ a:visited {
 
 .projects-container {
     max-width: 105rem;
-    padding: 2rem;
+    padding: 2rem;  
     margin: 0 auto;
 }
 
@@ -326,8 +326,48 @@ a:visited {
 /* CONTACT */
 
 #contact {
-    height: 20vh;
+    height: 32vh;
     background-color: var(--black-bg);
+}
+
+.contact-container {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 105rem;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contact-content h1 {
+    font-family: 'Haoura sans bold';
+    font-size: 4em;
+    text-align: left;
+    margin-bottom: 2rem;
+    color: var(--font-white)
+}
+
+.contact-content-info {
+    display: flex;
+    color: var(--font-white);
+    font-family: var(--font-inter);
+    gap: 1.3rem;
+    align-items: center;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    margin: 0 4rem;
+}
+
+[left], [right] {
+    font-size: 30px;
 }
 
 
