@@ -42,40 +42,110 @@
     background: #222; 
   }
 
-/* HEADER */
+/* BANNER */
 
-nav {
-    background-color: var(--black-bg);
-    padding: 1.5rem 2.5rem;
-    color: var(--font-white);
+.banner {
+    position: fixed;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    width: 50%;
+    margin: 0 auto;
+    height: 60px;
+    align-items: center;
+    z-index: 99;
+}
+
+.banner h2 {
     font-family: var(--font-inter);
-    width: 100%;
+    font-size: 1em;
 }
 
-nav ul {
-    float: right;
-}
+/* NAV */
 
-nav ul li {
-    display: inline-block;
-    margin-right: 1rem;
-}
-
-a:visited {
-    color: var(--font-white);
-}
-
-.checkbtn {
-    float: right;
-    margin-right: 1rem;
-    line-height: 10px;
-    font-size: 1.4em;
+#toggle {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--black-bg);
     cursor: pointer;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
 }
 
-#check {
-    display: none;
+#toggle::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background-color: var(--font-white);
+    transform: translateY(-5px);
+    transition: 0.2s;
+}
+
+
+#toggle::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background-color: var(--font-white);
+    transform: translateY(5px);
+    transition: 0.2s;
+}
+
+#toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+#toggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+#sidebar {
+    position: fixed;
+    top: 4rem;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--white-bg);
+    transition: 0.5s;
+    z-index: 99;
+
+}
+
+#sidebar.active {
+    right: 0px;
+}
+
+#sidebar ul {
+    position: relative;
+    margin-top: 50px;
+}
+
+#sidebar ul li {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 40px;
+}
+
+
+#sidebar ul li a:hover {
+    color: var(--font-white);
+    background-color: var(--black-bg);
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    color: var(--font-black);
+    font-family: var(--font-inter);
 }
 
 /* HOME */
@@ -121,6 +191,11 @@ a:visited {
     font-size: 2rem;
     gap: 1rem;
 }
+
+.hero-links .blue:hover, .contact-links .blue:hover, .project-links .blue:hover {
+    cursor: pointer;
+    color: var(--blue) !important; 
+} 
 
 .hero-img img {
     max-width: 20rem;
@@ -311,7 +386,6 @@ a:visited {
 }
 
 
-
 /* CONTACT */
 
 #contact {
@@ -361,13 +435,11 @@ a:visited {
     margin: 0 4rem;
 }
 
-[left] {
-    display: flex;
-    align-items: center;
-    font-size: 30px;
+.contact-links {
+    font-size: 25px;
     gap: 1.3rem;
+    display: flex;
 }
-
 
 /* MEDIA QUERIES */
 
@@ -487,43 +559,6 @@ a:visited {
 }
 
 @media only screen and (max-width: 858px) {
-    .checkbtn {
-        display: block;
-        font-size: 20px;
-    }
-
-    ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #fff;
-        top: 70px;
-        right: -100%;
-        text-align: center;
-        transition: all .5s;
-        z-index: 99;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-    }
-
-    a:hover, a.active {
-        background: none;
-        color: var(--font-black);
-    }
-
-    #check:checked ~ ul {
-        right: 0;
-        z-index: 99;
-    }
-
 }
 
 @media only screen and (max-width: 768px) {
