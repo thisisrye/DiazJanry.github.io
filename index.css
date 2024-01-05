@@ -244,12 +244,12 @@ a:visited {
 
 #projects {
     background-color: var(--white-bg);
-    height: 230vh;
+    height: 270vh;
 }
 
 .projects-container {
     max-width: 105rem;
-    padding: 2rem;  
+    padding: 2rem;
     margin: 0 auto;
 }
 
@@ -258,70 +258,59 @@ a:visited {
     padding: 2rem;
 }
 
-.projects-content h1 {
+.projects-text h1 {
     font-family: 'Haoura sans bold';
     font-size: 4em;
     text-align: left;
     margin-bottom: 2rem;
 }
 
-.project1 {
+.projects-image-container {
     display: flex;
-    flex-direction: row;
-    gap: 20rem;
+    justify-content: space-between;
     width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
-
-.project1-preview {
+.projects-image {
     background-color: #fff;
     padding: 2rem;
-    box-shadow: 0px 0px 73px -30px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 52px -19px rgba(0,0,0,0.75);
 }
 
-.project1-preview img {
+.projects-image img {
     max-width: 50rem;
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
-.project1-caption {
-    margin: auto; 
-}
-
-.project1-caption h2 {
-    font-family: 'Haoura sans bold';
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.project1-caption p {
+.project-caption {
     font-family: var(--font-inter);
-    font-size: 18px;
-    color: var(--font-black);
-}
-
-.caption-code {
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-    justify-content: center;
-    margin-top: 3rem;
-}
-
-.caption-codes {
-    display: flex;
     text-align: center;
-    font-size: 30px;
-    border-right: 2px solid var(--black-bg);
-    padding-right: 2rem;
-    gap: 1.3rem;
+    margin: auto auto;
 }
 
-.caption-links {
+.project-caption h2 {
+    margin-bottom: 2rem;
+}
+
+.project-links {
+    gap: 1.3rem;
+    margin-top: 2rem;
     font-size: 30px;
 }
+
+.project-links .fa-wordpress, .css3 {
+    padding-right: 2rem;
+    border-right: 2px solid var(--black-bg);
+}
+
+.project-links .fa-square-github {
+    padding-left: 2rem;
+}
+
+
 
 /* CONTACT */
 
@@ -391,17 +380,16 @@ a:visited {
         height: 100vh;
     }
 
-    #projects {
-        height: 205vh;
-    }
-
-    .project1-caption {
-        text-align: center;
-        width: 100%;
-    }
-
     #contact {
-        height: 35vh;
+        height: 36vh;
+    }
+
+    .project-caption {
+        margin: auto auto;
+    }
+
+    .projects-image {
+        width: 50%;
     }
 }
 
@@ -410,21 +398,25 @@ a:visited {
         margin-top: 15rem;
     }
 
-    .project1 {
-        gap: 10rem;
+    #projects {
+        height: 415vh;
     }
 
-    .project1-caption {
+    .projects-image-container {
+        flex-direction: column-reverse;
+    }
+
+    .project-caption {
         text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .projects-image {
         width: 100%;
     }
-
-    .project1-caption h2 {
-        margin-bottom: .5rem;
-    }
-
-    #projects {
-        height: 200vh;
+    
+    .projects-image img {
+        max-width: none;
     }
 }
 
@@ -531,6 +523,7 @@ a:visited {
         right: 0;
         z-index: 99;
     }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -538,30 +531,12 @@ a:visited {
         height: 100vh;
     }
 
-    #projects {
-        height: 390vh;
-    }
-
     #contact {
         height: 40vh;
     }
 
-    .projects-content h1 {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-
-    .project1 {
-        flex-direction: column-reverse;
-        gap: 4rem;
-    }
-
-    .project1-caption {
-        text-align: center;
-    }
-
-    .project1-caption h2 {
-        margin-bottom: 2rem;
+    #projects {
+        height: 350vh;
     }
 
     .contact-content h1 {
@@ -570,6 +545,10 @@ a:visited {
 
     .phone {
         margin: 0 3rem;
+    }
+
+    .projects-text h1 {
+        text-align: center;
     }
 
 
@@ -585,12 +564,13 @@ a:visited {
     }
 
     #projects {
-        height: 312vh;
+        height: 280vh;
     }
 
     #contact {
         height: 58vh;
     }
+    
 
     .contact-content-info {
         flex-direction: column;
@@ -602,10 +582,6 @@ a:visited {
         height: 145vh;
     }
 
-    #projects {
-        height: 312vh;
-    }
-
     #contact {
         height: 58vh;
     }
@@ -615,21 +591,5 @@ a:visited {
     }
 }
 
-/* @media only screen and (max-device-width: 320px) {
-    .hero-img img {
-        max-width: 15rem;
-    }
 
-    .about-content {
-        padding: 0;
-    }
-
-    .about-content h1 {
-        text-align: center;
-    }
-
-    #projects {
-        margin-top: 30rem;
-    }
-} */
     
