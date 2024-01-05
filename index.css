@@ -383,8 +383,21 @@ a:visited {
 /* MEDIA QUERIES */
 
 @media only screen and (max-width:1440px) {
+    .content {
+        margin-top: 15rem;
+    }
+
     #about {
         height: 100vh;
+    }
+
+    #projects {
+        height: 205vh;
+    }
+
+    .project1-caption {
+        text-align: center;
+        width: 100%;
     }
 
     #contact {
@@ -393,12 +406,17 @@ a:visited {
 }
 
 @media only screen and (max-width:1024px) {
+    .content {
+        margin-top: 15rem;
+    }
+
     .project1 {
         gap: 10rem;
     }
 
     .project1-caption {
         text-align: center;
+        width: 100%;
     }
 
     .project1-caption h2 {
